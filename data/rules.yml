@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Activate action_resultados_rodada when resultado_rodada is detected
+  steps:
+  - intent: resultado_rodada
+  - action: action_resultados_rodada
+
+- rule: Activate action_jogos_ao_vivo when jogos_ao_vivo is detected
+  steps:
+  - intent: jogos_ao_vivo
+  - action: action_jogos_ao_vivo
+
+- rule: Activate action_tabela when tabela is detected
+  steps:
+  - intent: tabela
+  - action: action_tabela

@@ -1,0 +1,151 @@
+version: "3.1"
+
+nlu:
+
+- intent: resultado_rodada
+  examples: |
+    - Resultados da rodada [5](rodada)
+    - Quais foram os resultados da rodada [36](rodada)?
+    - Mostra os resultados da rodada [12](rodada)
+    - Dá os placares da rodada [25](rodada)
+    - Quais times venceram na rodada [8](rodada)?
+    - Resultados do último jogo da rodada [15](rodada)
+    - Gols marcados na rodada [19](rodada)
+    - Quais foram os jogos da rodada [3](rodada)?
+    - Resultados da rodada [22](rodada) do Brasileirão
+    - Diga os vencedores da rodada [10](rodada)
+    - Placares dos jogos da rodada [32](rodada)
+    - Resultados da rodada [7](rodada) do campeonato
+    - Informações sobre a rodada [14](rodada)
+    - Resultados dos jogos da rodada [30](rodada)
+    - Mostra quem ganhou na rodada [2](rodada)
+
+- lookup: rodada
+  examples: |
+    - ^[1-9]$  # Matches single-digit numbers from 1 to 9
+    - ^[1-2][0-9]$  # Matches two-digit numbers from 10 to 29
+    - ^3[0-8]$  # Matches two-digit numbers from 30 to 38
+
+- intent: jogos_ao_vivo
+  examples: |
+    - Jogos ao vivo agora
+    - Quais são os jogos ao vivo?
+    - Mostra os jogos ao vivo
+    - Quais times estão jogando agora?
+    - Dá a lista dos jogos ao vivo
+    - Jogos que estão acontecendo agora
+    - Quais partidas estão ao vivo?
+    - Mostra os jogos em andamento
+    - Quais times estão se enfrentando neste momento?
+    - Informações sobre os jogos ao vivo
+    - Quais partidas posso assistir ao vivo?
+    - Jogos em tempo real
+    - Times jogando neste momento
+    - Partidas transmitidas ao vivo
+
+- intent: tabela
+  examples: |
+    - Tabela do campeonato
+    - Como está a tabela do campeonato brasileiro?
+    - Mostra a classificação
+    - Quais times estão no topo da tabela?
+    - Posição dos times na tabela
+    - Informações sobre a classificação
+    - Quais equipes estão na liderança?
+    - Dá a tabela atualizada
+    - Mostra a posição dos clubes
+    - Como está a classificação geral?
+    - Quem está no fundo da tabela?
+    - Tabela completa do campeonato
+    - Quais times estão na zona de rebaixamento?
+    - Ranking dos clubes no Brasileirão
+
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
